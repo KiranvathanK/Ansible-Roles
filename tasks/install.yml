@@ -3,6 +3,8 @@
   apt: update_cache=yes
 
 - name: install apache
+  vars:
+    status: present
   apt:
     name: apache2
-    state: present
+    state: "{{status}}"
